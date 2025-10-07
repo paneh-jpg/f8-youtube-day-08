@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Bài Tập</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER MENU ===== -->
+    <nav class="menu-bar">
+      <a href="#bai1" class="menu-item active">Bài 1</a>
+      <a href="#bai2" class="menu-item">Bài 2</a>
+      <a href="#bai3" class="menu-item">Bài 3</a>
+      <a href="#bai4" class="menu-item">Bài 4</a>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <section class="space-height" id="bai1">
+        <h2>Bài 1: Xây dựng Basic Modal sử dụng checkbox input và label</h2>
+        <h3>F8 - Học lập trình để đi làm</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim atque
+          cupiditate illo vitae veritatis ea, animi odit laboriosam repudiandae
+          rerum?
+        </p>
+        <label class="open-btn" for="input-checkbox">Open modal</label>
+        <input
+          type="checkbox"
+          name=""
+          id="input-checkbox"
+          class="modal__input"
+          hidden
+        />
+        <div class="modal">
+          <div class="modal__content" id="modal__content">
+            <div class="modal__top">
+              <label class="close-btn" for="input-checkbox">X</label>
+              <h1 class="modal__title">Modal Title</h1>
+            </div>
+            <p class="modal__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              sapiente labore unde dolorem quidem inventore.
+            </p>
+          </div>
+          <label for="input-checkbox" class="modal__overlay"></label>
+        </div>
+      </section>
+
+      <section class="space-height" id="bai2">
+        <h2>Bài 2: Xây dựng Toggle Button sử dụng checkbox input và label</h2>
+        <div class="switch">
+          <input
+            hidden
+            class="switch__checkbox"
+            type="checkbox"
+            name=""
+            id="switch-btn"
+          />
+          <label for="switch-btn" class="switch-label"></label>
+        </div>
+        <div class="switch">
+          <input
+            hidden
+            checked
+            class="switch__checkbox"
+            type="checkbox"
+            name=""
+            id="switch-btn-02"
+          />
+          <label for="switch-btn-02" class="switch-label"></label>
+        </div>
+
+        <div class="switch">
+          <input
+            hidden
+            checked
+            class="switch__checkbox"
+            type="checkbox"
+            name=""
+            id="switch-btn-03"
+          />
+          <label
+            for="switch-btn-03"
+            class="switch-label switch-label-red"
+          ></label>
+        </div>
+      </section>
+
+      <section class="space-height" id="bai3">
+        <h2>Bài 3: Xây dựng animation input sử dụng transform/position</h2>
+
+        <form class="form">
+          <div class="form__top">
+            <h3>Hello, Welcome to F8</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="input-text">
+            <input
+              type="text"
+              class="form-input"
+              name="username"
+              id="username"
+              placeholder=" "
+            />
+            <label class="form-label" for="username">Username</label>
+          </div>
+          <div class="input-text">
+            <input
+              type="password"
+              class="form-input"
+              name="password"
+              id="username"
+              placeholder=" "
+            />
+            <label class="form-label" for="password">Password</label>
+          </div>
+        </form>
+      </section>
+
+      <section class="space-height" id="bai4">
+        <h2>Bài 4: Xây dựng animation button sử dụng position</h2>
+        <div class="btn-list">
+          <a href="#!" class="btn btn-01"
+            ><span class="text-01">Hover me!</span></a
+          >
+          <a href="#!" class="btn btn-02"
+            ><span class="text-01">Hover me!</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!--  JS: đánh dấu tab đang active -->
+    <script>
+      const menuItems = document.querySelectorAll(".menu-item");
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          menuItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
